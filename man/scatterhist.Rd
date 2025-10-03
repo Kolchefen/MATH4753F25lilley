@@ -22,5 +22,5 @@ a scatter plot
 Scatter plot with marginal histogram
 }
 \examples{
-scatterhist(x = 1:10, y = 11:21, xlab = "x", ylab = "y")
+scatterhist(x = 1:10, y = 11:20, xlab = "x", ylab = "y")
 }

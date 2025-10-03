@@ -1,0 +1,82 @@
+---
+title: "Birthday Problem"
+author: "Zachary Lilley"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Birthday}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Mathematical Derivation
+Individual Probabilities:
+
+- Person 1: Can have any birthday $p = \frac{365}{365}$
+
+- Person 2: Can have a different birthday $p = \frac{364}{365}$
+
+- Person 3: Must differ from 1 and 2 $p = \frac{363}{365}$
+
+- Person n: Must differ from all previous $(n-1)$ people $p = \frac{365 - n + 1}{365}$
+
+Supplements:
+$$
+A = \text{2 or more shared birthdays} \newline
+\bar A = \text{no shared birthdays}
+$$
+
+So the probability they are all different:
+$$
+P(\bar A) = P(all~different) = \frac{365!}{(365 - n)!\times365^n}
+$$
+This implies that:
+$$
+P(\bar A) = \frac{365!/(365-n)!}{365^n} = \frac{{}^{365}P_{n}}{365^n} \newline AND \newline
+P(A) = 1 - P(\bar A)
+$$
+
+Now we can use the Division Rule of Logs to say:
+$$
+log(P(\bar A)) = log({}^{365}P_{n}) - n~log(365) 
+$$
+
+And so with Stirling Approximation where $log(n!) \approx n~log~n - n$:
+$$
+log({}^{365}P_{n}) = log(365!) + log{365\choose{n}} - n~log(365)
+$$
+Simplifying:
+$$
+P(\bar A) = log(n!) +log{365\choose{n}} - n~log(365)
+$$
+Recall: $P(A) = 1 - P(\bar A)$
+And adding a little R, and reversing the logs, we can write the function as:
+$$
+P(A) \approx 1 - exp(P(\bar A)) = \newline
+1 - exp(log(choose(365,n)) + log(factorial(n)) - n~log(365))
+$$
+
+```{r setup}
+library(MATH4753F25lilley)
+```
+
+# Function body for Birthday Prediction
+```{}
+1-exp(lchoose(365,x) + lfactorial(x) - x*log(365))
+```
+
+# Implementing the Birthday function to find probability of 2 or more people in a class of n people that share a birthday
+```{r}
+MATH4753F25lilley::birthday(20:24)
+```
+
+
+
+
+

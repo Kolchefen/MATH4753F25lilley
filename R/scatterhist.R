@@ -4,11 +4,12 @@
 #' @param y quantitative vector
 #' @param xlab x label string
 #' @param ylab y label string
+#' @importFrom graphics barplot hist layout mtext par
 #'
 #' @returns a scatter plot
 #' @export
 #'
-#' @examples scatterhist(x = 1:10, y = 11:21, xlab = "x", ylab = "y")
+#' @examples scatterhist(x = 1:10, y = 11:20, xlab = "x", ylab = "y")
 scatterhist = function(x, y, xlab="", ylab=""){
   zones=matrix(c(2,0,1,3), ncol=2, byrow=TRUE)
   layout(zones, widths=c(4/5,1/5), heights=c(1/5,4/5))
