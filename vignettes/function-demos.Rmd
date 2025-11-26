@@ -1,0 +1,50 @@
+---
+title: "Demonstrating Four Key Functions"
+author: "Zachary Lilley"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Demonstrating Four Key Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5
+)
+library(MATH4753F25lilley)
+```
+
+## 1. Normal Curve with Shaded Area
+
+The `myncurve()` function plots a normal distribution and shades the area up to a specified value:
+```{r}
+myncurve(mu = 10, sigma = 3, a = 12)
+```
+
+## 2. Bootstrap Confidence Intervals
+
+The `myboot2()` function calculates bootstrap confidence intervals:
+```{r}
+set.seed(123)
+sample_data <- rnorm(30, mean = 50, sd = 10)
+myboot2(x = sample_data, iter = 1000, fun = "mean", alpha = 0.05)
+```
+
+## 3. Optimal Ticket Sales
+
+The `ntickets()` function determines optimal overbooking:
+```{r}
+ntickets(N = 200, gamma = 0.02, p = 0.95)
+```
+
+## 4. Scatter Plot with Histograms
+
+The `scatterhist()` function creates a scatter plot with marginal histograms:
+```{r}
+x <- rnorm(50, mean = 5, sd = 2)
+y <- 2*x + rnorm(50, mean = 0, sd = 1)
+scatterhist(x, y, xlab = "X values", ylab = "Y values")
+```
