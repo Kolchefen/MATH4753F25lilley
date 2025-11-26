@@ -1,6 +1,6 @@
 Package: MATH4753F25lilley
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Zach's Applied Statistical Methods 
 Version: 0.1.0
 Authors@R: c(
     person(
@@ -9,8 +9,7 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: In this package several applications of statistical methods are present. From utilizting choice theory to proving the central limit theorem and the overbooking problem.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

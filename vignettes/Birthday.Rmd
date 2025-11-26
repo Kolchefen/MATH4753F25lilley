@@ -3,7 +3,7 @@ title: "Birthday Problem"
 author: "Zachary Lilley"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Birthday}
+  %\VignetteIndexEntry{Birthday Problem}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
