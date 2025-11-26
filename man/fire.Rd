@@ -13,7 +13,7 @@ A data frame with 15 rows and 2 columns:
 }
 }
 \source{
-[Add your source here, e.g., "City Fire Department Records, 2024" or "Simulated data for educational purposes"]
+[MS 6th]
 }
 \usage{
 fire

@@ -2,7 +2,7 @@
 % Please edit documentation in R/birthday.R
 \name{birthday}
 \alias{birthday}
-\title{Title}
+\title{Determine the probability 2 or more people share the same birthday in a group of x number of people.}
 \usage{
 birthday(x)
 }
@@ -13,7 +13,7 @@ birthday(x)
 Percentage of Probability
 }
 \description{
-Title
+Determine the probability 2 or more people share the same birthday in a group of x number of people.
 }
 \examples{
 birthday(20)

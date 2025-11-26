@@ -10,5 +10,5 @@
 #'   \item{DISTANCE}{Distance from the fire station (in miles)}
 #'   \item{DAMAGE}{Fire damage (in thousands of dollars)}
 #' }
-#' @source [Add your source here, e.g., "City Fire Department Records, 2024" or "Simulated data for educational purposes"]
+#' @source [MS 6th]
 "fire"

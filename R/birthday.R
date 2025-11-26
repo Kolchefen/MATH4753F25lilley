@@ -1,4 +1,4 @@
-#' Title
+#' Determine the probability 2 or more people share the same birthday in a group of x number of people.
 #'
 #' @param x Size of group of people
 #'
